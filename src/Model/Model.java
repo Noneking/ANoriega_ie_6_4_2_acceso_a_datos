@@ -27,7 +27,21 @@ public class Model extends Connection{
     }
     
     public void insertClient(Client c){
-        
+        try {
+            cs=getConnection().prepareCall("{call TIP_CLIENTE_INSERT(?,?,?,?,?,?,?,?,?)}");
+            cs.setString(1, c.getNombre());
+            cs.setString(2, c.getDireccion().getCalle());
+            cs.setString(3, c.getDireccion().getPoblacion());
+            cs.setInt(4, c.getDireccion().getCodPostal());
+            cs.setString(5, c.getDireccion().getProvincia());
+            cs.setString(6, c.getNif());
+            cs.setInt(7, Integer.parseInt(c.getTelefonos().get(0)));
+            cs.setInt(8, Integer.parseInt(c.getTelefonos().get(1)));
+            cs.setInt(9, Integer.parseInt(c.getTelefonos().get(2)));
+            cs.execute();
+        } catch (SQLException ex) {
+            Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public void modifyClient(){

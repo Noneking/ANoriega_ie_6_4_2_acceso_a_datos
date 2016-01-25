@@ -23,6 +23,7 @@ public class Main extends javax.swing.JFrame {
         jButtonInsert = new javax.swing.JButton();
         jButtonModify = new javax.swing.JButton();
         jToggleButtonDelete = new javax.swing.JToggleButton();
+        jButtonCheckConnection = new javax.swing.JButton();
         jTabbedPane = new javax.swing.JTabbedPane();
         jSplitPaneClient = new javax.swing.JSplitPane();
         jPanelClient = new javax.swing.JPanel();
@@ -91,6 +92,12 @@ public class Main extends javax.swing.JFrame {
         jToggleButtonDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jToggleButtonDelete.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar.add(jToggleButtonDelete);
+
+        jButtonCheckConnection.setText("COMPROBAR CONEXION");
+        jButtonCheckConnection.setFocusable(false);
+        jButtonCheckConnection.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonCheckConnection.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar.add(jButtonCheckConnection);
 
         jSplitPaneClient.setDividerLocation(200);
 
@@ -368,6 +375,7 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton jButtonCheckConnection;
     public javax.swing.JButton jButtonInsert;
     public javax.swing.JButton jButtonLineaVentaProductAdd;
     public javax.swing.JButton jButtonModify;

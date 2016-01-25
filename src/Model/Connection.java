@@ -18,7 +18,7 @@ public class Connection {
     
     java.sql.Connection c;
     
-    private String url="jdbc:oracle:thin@localhost:1521:XE";
+    private String url="jdbc:oracle:thin@localhost:1521:ORCL";
     private String user="SYSTEM";
     private String password="root";
     
